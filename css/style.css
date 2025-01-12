@@ -1,49 +1,79 @@
+html,
+body {
+  margin: 0;
+}
+
+/* header */
+#header {
+  padding: 20px 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 1rem;
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      padding: 5px 0;
+      margin-left: 20px;
+
+      a {
+        text-decoration: none;
+        color: #555;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 /* home */
 #home {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  #home h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  #home p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .btn:hover {
-    background-color: #45a049;
-  }
-  
-  /* Projects Section */
-  #projects {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-  }
-  
-  #projects h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  #projects p {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* About Section */
+#about {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+
+  p {
     font-size: 1rem;
     margin-bottom: 30px;
     color: #555;
@@ -51,56 +81,131 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
-  .projects-row {
-    display: flex;
-    justify-content: center;
+
+  /* Separate columns */
+
+  @media (max-width: 768px) {
+    .about_grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    flex-wrap: wrap; /* Asegura que las tarjetas se ajusten si el espacio no es suficiente */
+    align-items: stretch;
+
+    #description {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #skills {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      li {
+        list-style: none;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #555;
+        padding: 5px 0;
+      }
+    }
   }
-  
-  .project {
-    width: 300px;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project img {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    border-radius: 5px; /* Esquinas redondeadas */
-    margin-bottom: 15px;
-    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
-    height: 200px; /* Altura consistente para todas las imágenes */
-  }
-  
-  .project h3 {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .project p {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .project .btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  .project .btn:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+/* Configuraciones generales para h2 y h3 */
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  max-width: 80rem;
+  line-height: 1.6;
+  margin: auto;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#projects p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Asegura que las tarjetas se ajusten si el espacio no es suficiente */
+}
+
+.project {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-bottom: 15px;
+  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+  height: 200px; /* Altura consistente para todas las imágenes */
+}
+
+.project h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project .btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.project .btn:hover {
+  background-color: #0056b3;
+}

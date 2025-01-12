@@ -23,84 +23,116 @@
     <section id="home">
       <h1>Hi, I'm [Tu Nombre]</h1>
       <p>
-        I am a Junior Web Developer, passionate about solving problems and learning new technologies. My journey started with C++, where I developed projects like Simulación de la Tinka, Encuentra al Reno, and Juego de la Vida de Conway. Now, I'm transitioning into web development, focusing on HTML, CSS, and JavaScript to build interactive and user-friendly websites.
+        I am a Junior Web Developer, passionate about solving problems and
+        learning new technologies. My journey started with C++, where I
+        developed projects like Simulación de la Tinka, Encuentra al Reno, and
+        Juego de la Vida de Conway. Now, I'm transitioning into web development,
+        focusing on HTML, CSS, and JavaScript to build interactive and
+        user-friendly websites.
       </p>
       <p>
-        I am excited to apply my problem-solving skills from C++ to web development and create optimized, responsive websites that provide a seamless user experience.
+        I am excited to apply my problem-solving skills from C++ to web
+        development and create optimized, responsive websites that provide a
+        seamless user experience.
       </p>
       <a href="#projects" class="btn">View My Projects</a>
     </section>
-    
-    
+
+    <!-- Section About -->
     <section id="about">
-      <h2>ABOUT ME</h2>
+      <h2 class="title_h2">ABOUT ME</h2>
       <p>
-        Here yo will find more information about me, what I do,and my current
+        Here you will find more information about me, what I do,and my current
         skills mostly in terms of programming and technology.
       </p>
+
+      <div class="about_grid">
+        <div id="description">
+          <h3 class="title_h3">Get to know me!</h3>
+          <p>
+            I'm a <strong>Frontend Focused Web Developer</strong> building and
+            managing the Front-end of Websites and Web Applications that leads
+            to the success of the overall product. Check out some of my work in
+            the
+            <strong>Projects</strong>
+            section.
+          </p>
+          <a href="#contact" class="btn">Contact</a>
+        </div>
+        <div id="skills">
+          <h3 class="title_h3">My Skills</h3>
+          <ul>
+            <li>C++</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Github</li>
+          </ul>
+        </div>
+      </div>
     </section>
-    <section id="description">
-      <h3>Get to know me!</h3>
+
+    <section id="projects">
+      <h2>PROJECTS</h2>
       <p>
-        I'm a Frontend Focused Web Developer building and managing the Front-end
-        of Websites and Web Applications that leads to the success of the
-        overall product. Check out some of my work in the Projects section.
+        Here you will find some of the personal and client projects that I
+        created with each project containing its own case study.
       </p>
+
+      <div class="projects-container">
+        <!-- Proyecto: Simulacion de la Tinka -->
+        <div class="project-card">
+          <h3>Simulación de la Tinka</h3>
+          <img
+            src="images/tinka.png"
+            alt="Simulacion de la Tinka"
+            class="project-image"
+          />
+          <p>
+            This project simulates the Tinka lottery system in C++. The user can
+            choose a set of numbers and check if they match with the randomly
+            generated winning numbers.
+          </p>
+          <a href="URL_DEL_PROYECTO_TINKA" class="btn" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <!-- Proyecto: Encuentra al Reno -->
+        <div class="project-card">
+          <h3>Encuentra al Reno</h3>
+          <img
+            src="images/reno.jpeg"
+            alt="Encuentra al Reno"
+            class="project-image"
+          />
+          <p>
+            In this C++ project, the user has to find the hidden reindeer in a
+            virtual grid, using clues to locate its position.
+          </p>
+          <a href="URL_DEL_PROYECTO_RENO" class="btn" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <!-- Proyecto: Juego de la Vida de Conway -->
+        <div class="project-card">
+          <h3>Juego de la Vida de Conway</h3>
+          <img
+            src="images/juegovida.png"
+            alt="Juego de la Vida de Conway"
+            class="project-image"
+          />
+          <p>
+            This C++ project is a simulation of Conway's Game of Life. It models
+            cellular automata where cells live, die, or reproduce based on a set
+            of rules.
+          </p>
+          <a href="URL_DEL_PROYECTO_VIDA" class="btn" target="_blank"
+            >View Project</a
+          >
+        </div>
+      </div>
     </section>
-    <section id="skills">
-      <h3>My Skills</h3>
-      <ul>
-        <li>C++</li>
-        <li>HTML</li>
-        <li>css</li>
-        <li>Github</li>
-      </ul>
-    </section>
-
-   <section id="projects">
-  <h2>PROJECTS</h2>
-  <p>
-    Here you will find some of the personal and client projects that I
-    created with each project containing its own case study.
-  </p>
-
-  <div class="projects-container">
-    <!-- Proyecto: Simulacion de la Tinka -->
-    <div class="project-card">
-      <h3>Simulación de la Tinka</h3>
-      <img src="images/tinka.png" alt="Simulacion de la Tinka" class="project-image"/>
-      <p>
-        This project simulates the Tinka lottery system in C++. The user can
-        choose a set of numbers and check if they match with the randomly
-        generated winning numbers.
-      </p>
-      <a href="URL_DEL_PROYECTO_TINKA" class="btn" target="_blank">View Project</a>
-    </div>
-
-    <!-- Proyecto: Encuentra al Reno -->
-    <div class="project-card">
-      <h3>Encuentra al Reno</h3>
-      <img src="images/reno.jpeg" alt="Encuentra al Reno" class="project-image"/>
-      <p>
-        In this C++ project, the user has to find the hidden reindeer in a
-        virtual grid, using clues to locate its position.
-      </p>
-      <a href="URL_DEL_PROYECTO_RENO" class="btn" target="_blank">View Project</a>
-    </div>
-
-    <!-- Proyecto: Juego de la Vida de Conway -->
-    <div class="project-card">
-      <h3>Juego de la Vida de Conway</h3>
-      <img src="images/juegovida.png" alt="Juego de la Vida de Conway" class="project-image"/>
-      <p>
-        This C++ project is a simulation of Conway's Game of Life. It models
-        cellular automata where cells live, die, or reproduce based on a set
-        of rules.
-      </p>
-      <a href="URL_DEL_PROYECTO_VIDA" class="btn" target="_blank">View Project</a>
-    </div>
-  </div>
-</section>
 
     <section id="contact">
       <h2>CONTACT</h2>
