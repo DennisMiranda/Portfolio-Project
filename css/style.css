@@ -7,16 +7,22 @@ body {
 }
 
 /* header */
-#header {
-  padding: 20px 20px;
-  background-color: #f4f4f4;
-  margin-bottom: 1rem;
+header {
+  
+  background-color: hsl(0, 69%, 6%);
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 
   nav ul {
     display: flex;
     justify-content: flex-end;
     padding: 0;
-    margin: 0;
+    margin-right: 10px;
+   
 
     li {
       list-style: none;
@@ -27,31 +33,78 @@ body {
 
       a {
         text-decoration: none;
-        color: #555;
+        color: hsl(54, 84%, 51%);
         font-size: 18px;
         font-weight: 700;
       }
     }
   }
+
+  .logo-container{
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 500px;
+  
+    justify-content: flex-start;
+    
+  }
+  
+  .logo{
+    width: 100px;
+   
+  }
 }
+
+
 
 /* home */
 #home {
-  background-color: #f4f4f4;
-  padding: 50px 20px;
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background-image: url(../images/computadora.jpg);
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 0 20px; /* Añadir algo de padding para asegurar que el contenido no toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el tamaño total del elemento */
+}
+
+.seccion.contenido {
+  height: calc(100vh - 80px); /* Restar la altura del header y footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center;
+  padding: 0 20px; /* Añadir padding para asegurarse de que el contenido no toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el tamaño total del elemento */
+}
+
+
+#home h1, #home h2, #home p {
+  margin: 10px 0; /* Añadir un pequeño margen vertical */
+
 }
 
 #home h1 {
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+  color: #ffa726;
+  padding: 50px
+}
+
+#home h2 {
+  font-size: 1.5rem;
+  color: #ffb74d;
 }
 
 #home p {
   font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 20px;
+  color: #ffcc80;
 }
 
 .btn {
@@ -61,11 +114,13 @@ body {
   font-size: 1rem;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 40px; /* Añadir margen superior para separar del resto del contenido */
 }
 
 .btn:hover {
   background-color: #45a049;
 }
+
 
 /* About Section */
 #about {
@@ -75,6 +130,10 @@ body {
   padding: 50px 20px;
   text-align: center;
   background-color: #f4f4f4;
+  height: calc(100vh - 80px); /* Restar la altura del header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
 
   p {
     font-size: 1rem;
@@ -122,29 +181,19 @@ body {
   }
 }
 
-/* Configuraciones generales para h2 y h3 */
-
-h2 {
-  text-align: center;
-  color: #333;
-  font-size: 2rem;
-  max-width: 80rem;
-  line-height: 1.6;
-  margin: auto;
-}
-
-h3 {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 10px;
-}
 
 /* Projects Section */
 #projects {
   padding: 50px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #fff5e6; /* Fondo naranja suave */
+  height: calc(100vh - 80px); /* Restar la altura del header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
 }
+
+
 
 #projects h2 {
   font-size: 2rem;
@@ -161,14 +210,16 @@ h3 {
   margin-right: auto;
 }
 
+/* Cambié .projects-container a .projects-row para usarlo correctamente */
 .projects-row {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap; /* Asegura que las tarjetas se ajusten si el espacio no es suficiente */
+  margin: 0 auto; /* Alineación centrada */
 }
 
-.project {
+.project-card {
   width: 300px;
   padding: 20px;
   background-color: #ffffff;
@@ -176,9 +227,10 @@ h3 {
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Espacio entre las tarjetas */
 }
 
-.project img {
+.project-card img {
   width: 100%; /* La imagen ocupa todo el ancho del contenedor */
   border-radius: 5px; /* Esquinas redondeadas */
   margin-bottom: 15px;
@@ -186,19 +238,19 @@ h3 {
   height: 200px; /* Altura consistente para todas las imágenes */
 }
 
-.project h3 {
+.project-card h3 {
   font-size: 1.4rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-.project p {
+.project-card p {
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 15px;
 }
 
-.project .btn {
+.project-card .btn {
   display: inline-block;
   padding: 10px 15px;
   background-color: #007bff;
@@ -209,8 +261,90 @@ h3 {
   text-align: center;
 }
 
-.project .btn:hover {
+.project-card .btn:hover {
   background-color: #0056b3;
+}
+
+
+/*Section Team*/
+
+.team-section {
+  text-align: center;
+  background-color: #fff5e6; /* Fondo naranja suave */
+  padding: 40px 20px; /* Añade un margen interno */
+  min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.team-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+  gap: 20px; /* Espaciado entre tarjetas */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  padding: 0; /* Elimina cualquier padding que pueda estar afectando */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.team-member {
+  perspective: 1200px; /* Ajusta la perspectiva del efecto 3D */
+  margin: 20px; /* Añade un margen alrededor de cada tarjeta */
+}
+
+.card {
+  width: 250px; /* Ancho fijo para todas las tarjetas */
+  height: 350px; /* Altura fija para todas las tarjetas */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out; /* Transición suave */
+}
+
+.card.flipped {
+  transform: rotateY(180deg); /* Voltea la tarjeta al pasar el mouse */
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  overflow: hidden; /* Esconde el contenido desbordado */
+}
+
+
+.front img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.back {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 20px; /* Espaciado interno */
+  text-align: center;
+}
+
+.back h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  
+}
+
+.back p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /*Format Skills*/

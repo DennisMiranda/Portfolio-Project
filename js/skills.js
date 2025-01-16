@@ -25,3 +25,11 @@ var tagCloud = TagCloud('.content', myTags,{
 var colors = ['#34A853', '#FBBC05', '#4285F4', '#7FBC00', 'FFBA01', '01A6F0'];
 var random_color = colors[Math.floor(Math.random() * colors.length)];
 document.querySelector('.content').style.color = random_color;
+
+
+document.querySelectorAll('.card').forEach(card => { 
+	card.addEventListener('click', () => { 
+		card.classList.toggle('flipped'); 
+		}); 
+	}); 
+
