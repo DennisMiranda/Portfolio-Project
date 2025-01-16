@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section id="header">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" id="btn_edit">Edit</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
+
+  <div id="slot_edit_form"></div>
+
+  <section id="home">
+    <h1>Hi, I'm <span id="slot_home_name"></span></h1>
+    <p id="slot_home_profile"></p>
+
+    <a href="#projects" class="btn">View My Projects</a>
+  </section>
+
+  <!-- Section About -->
+  <section id="about">
+    <h2 class="title_h2">ABOUT ME</h2>
+    <p id="slot_about_profile"></p>
+
+    <div class="about_grid">
+      <div id="description">
+        <h3 class="title_h3">Get to know me!</h3>
+        <p id="slot_about_profile_grid"></p>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+      <div id="skills">
+        <h3 class="title_h3">My Skills</h3>
+        <span id="slot_about_skills_tags"></span>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>PROJECTS</h2>
+    <p id="slot_project_description"></p>
+
+    <div class="projects-container">
+      <!-- Proyecto 1: -->
+      <div class="project-card">
+        <h3 id="slot_project_name_1"></h3>
+        <img id="slot_project_img_1" src="" alt="" class="project-image" />
+        <p id="slot_project_description_1"></p>
+        <a id="slot_project_link_1" href="" class="btn" target="_blank">View Project</a>
+      </div>
+
+      <!-- Boton para agregar mas proyectos -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-main-container">
+      <h2 class="heading-contact-main">
+        <span class="heading-title-contac">Contact</span>
+        <span id="slot_contact_description" class="heading-description-contac">
+        </span>
+      </h2>
+      <div class="contact_form-container">
+        <form action="#" class='contact_form' method='post'><input type='hidden' name='form-name' value='form 1' />
+          <div class="contact_form-field">
+            <label class="contact_form-label" for="name">Name</label>
+            <input required placeholder="Enter Your Name" type="text" class="contact_form-input" name="name"
+              id="name" />
+          </div>
+          <div class="contact_form-field">
+            <label class="contact_form-label" for="email">Email</label>
+            <input required placeholder="Enter Your Email" type="email" class="contact_form-input" name="email"
+              id="email" />
+          </div>
+          <div class="contact_form-field">
+            <label class="contact_form-label" for="message">Message</label>
+            <textarea required cols="30" rows="10" class="contact_form-input" placeholder="Enter Your Message"
+              name="message" id="message"></textarea>
+          </div>
+          <button type="submit" class="btn-contact-btn">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer_upper">
+        <div class="main-footer_row-1">
+          <h2 class="main-footer_heading">
+            <span>Social</span>
+          </h2>
+          <div class="main-footer_social-cont">
+            <a id="slot_linkedin_link" target="_blank" rel="noreferrer" href="">
+              <img class="main-footer_icon" src="../images/linkedin-ico.png" alt="Linkedin Profile" />
+            </a>
+            <a id="slot_github_link" target="_blank" rel="noreferrer" href="">
+              <img class="main-footer_icon" src="../images/github-ico.png" alt="Github Profile" />
+            </a>
+            <a id="slot_twitter_link" target="_blank" rel="noreferrer" href="https://twitter.com">
+              <img class="main-footer_icon" src="../images/twitter-ico.png" alt="Twitter Profile" />
+            </a>
+            <a id="slot_youtube_link" target="_blank" rel="noreferrer" href="https://www.youtube.com">
+              <img class="main-footer_icon" src="../images/yt-ico.png" alt="YouTube Profile" />
+            </a>
+          </div>
+        </div>
+        <div class="main-footer_row-2">
+          <h2 id="slot_footer_name" class="heading-text-name_row2"></h2>
+          <p id="slot_footer_description" class="heading-text-description_row2">
+
+          </p>
+          <div class="main-footer_lower">
+            <p>&copy;2025 Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
