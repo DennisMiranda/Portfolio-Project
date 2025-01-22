@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html,
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* header */
+header {
+  
+  background-color: hsl(0, 69%, 6%);
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin-right: 10px;
+   
+
+    li {
+      list-style: none;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      padding: 5px 0;
+      margin-left: 20px;
+
+      a {
+        text-decoration: none;
+        color: hsl(54, 84%, 51%);
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .logo-container{
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 500px;
+  
+    justify-content: flex-start;
+    
+  }
+  
+  .logo{
+    width: 100px;
+   
+  }
+}
+
+
+
+/* home */
+#home {
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/computadora.jpg);
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 0 20px; /* Añadir algo de padding para asegurar que el contenido no toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el tamaño total del elemento */
+}
+
+.seccion.contenido {
+  height: calc(100vh - 80px); /* Restar la altura del header y footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center;
+  padding: 0 20px; /* Añadir padding para asegurarse de que el contenido no toque los bordes */
+  box-sizing: border-box; /* Incluye padding en el tamaño total del elemento */
+}
+
+
+#home h1, #home h2, #home p {
+  margin: 10px 0; /* Añadir un pequeño margen vertical */
+
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  color: #ffa726;
+  padding: 50px
+}
+
+#home h2 {
+  font-size: 1.5rem;
+  color: #ffb74d;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #ffcc80;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 40px; /* Añadir margen superior para separar del resto del contenido */
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+
+/* About Section */
+#about {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  height: calc(100vh - 80px); /* Restar la altura del header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Separate columns */
+
+  @media (max-width: 768px) {
+    .about_grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .about_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+
+    #description {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #skills {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      li {
+        list-style: none;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #555;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff5e6; /* Fondo naranja suave */
+  height: calc(100vh - 80px); /* Restar la altura del header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#projects p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cambié .projects-container a .projects-row para usarlo correctamente */
+.projects-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Asegura que las tarjetas se ajusten si el espacio no es suficiente */
+  margin: 0 auto; /* Alineación centrada */
+}
+
+.project-card {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Espacio entre las tarjetas */
+}
+
+.project-card img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-bottom: 15px;
+  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+  height: 200px; /* Altura consistente para todas las imágenes */
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-card .btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.project-card .btn:hover {
+  background-color: #0056b3;
+}
+
+
+/*Section Team*/
+
+.team-section {
+  text-align: center;
+  background-color: #fff5e6; /* Fondo naranja suave */
+  padding: 40px 20px; /* Añade un margen interno */
+  min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.team-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+  gap: 20px; /* Espaciado entre tarjetas */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  padding: 0; /* Elimina cualquier padding que pueda estar afectando */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.team-member {
+  perspective: 1200px; /* Ajusta la perspectiva del efecto 3D */
+  margin: 20px; /* Añade un margen alrededor de cada tarjeta */
+}
+
+.card {
+  width: 250px; /* Ancho fijo para todas las tarjetas */
+  height: 350px; /* Altura fija para todas las tarjetas */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out; /* Transición suave */
+}
+
+.card.flipped {
+  transform: rotateY(180deg); /* Voltea la tarjeta al pasar el mouse */
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  overflow: hidden; /* Esconde el contenido desbordado */
+}
+
+
+.front img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+.back {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 20px; /* Espaciado interno */
+  text-align: center;
+}
+
+.back h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  
+}
+
+.back p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact {
+  background: #2d3250;
+  background-size: cover;
+  background-position: center
+}
+
+.contact_form-container {
+  box-shadow: rgba(0, 0, 0, 0.979) 0px 7px 29px 0px;
+  background: white;
+  padding: 6rem;
+  margin-top: 6rem;
+  max-width: 80rem;
+  text-align: right;
+  width: 95%;
+  border-radius: 5px;
+  margin: 5rem auto 0 auto
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact_form-container {
+      padding:3rem
+  }
+}
+
+.contact_form-field {
+  margin-right: 70px;
+  margin-bottom: 4rem;
+  
+  
+}
+@media only screen and (max-width: 37.5em) {
+  .contact_form-field {
+      margin-bottom:3rem
+  }
+}
+.contact_form-label {
+  color: #424769;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left
+}
+.contact_form-input {
+  color: #333;
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #ebebeb;
+  font-size: 1.6rem;
+  letter-spacing: 0px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 600
+}
+
+.contact_form-input::-moz-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input:-ms-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input::placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input:-ms-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input::-ms-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input:-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.contact_form-input::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 600;
+  font-size: 1.6rem
+}
+
+.btn-contact-btn {
+  width: 30%;
+  padding: 2rem 4rem;
+  font-size: 1.6rem
+}
+
+.main-footer {
+  background: #f9b17a;
+  color: #fff;
+}
+.main-container{
+    max-width: 120rem;
+    margin: auto;
+    width: 92%;
+
+  }
+  
+.main-footer_upper{
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem 0;
+}
+
+@media only screen and (max-width: 56.25em){
+  .main-footer_upper{
+    padding: 6rem 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .main-footer_upper{
+    display: block;
+  }
+}
+
+.main-footer_row-1 {
+  order: 4;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main-footer_row-1 {
+    margin-bottom: 5rem;
+  }
+}
+.main-footer_row-2 {
+  width: 40%;
+  order: 1;
+  max-width: 50rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .main-footer_row-2{
+    width: 100%;
+  }
+}
+
+.heading-text-description_row2 {
+  margin-top: 2rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.main-footer_social-cont {
+  margin-right: 2rem;
+}
+
+.main-footer_icon{
+  margin-right: 1rem;
+  width: 2.5rem;
+}
+
+.main-footer_lower{
+  padding: 4rem 0;
+  border-top: 1px solid #444;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: left;
+  text-align: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .main-footer__lower {
+      padding:3.5rem 0
+  }
+}
+
+
+/*Format Skills*/
+
+.tagcloud {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin: auto;
+  width: 50%;
+}
+.tagcloud--item:hover {
+  color: #36454f;
+}
