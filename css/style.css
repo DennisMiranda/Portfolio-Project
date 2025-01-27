@@ -357,14 +357,23 @@ header {
   box-shadow: rgba(0, 0, 0, 0.979) 0px 7px 29px 0px;
   background: white;
   padding: 6rem;
-  margin-top: 6rem;
+  margin-top: -6rem;
+  margin-bottom: -6rem;
   max-width: 80rem;
   text-align: right;
-  width: 95%;
+  width: 60%;
   border-radius: 5px;
-  margin: 5rem auto 0 auto
+  margin-bottom: 5px;
+  margin: 5rem auto 0 auto 
+  
 }
-
+.heading-title-contac{
+  text-align: right;
+}
+.heading-contact-main{
+  color: #fff;
+  text-align: center;
+}
 @media only screen and (max-width: 37.5em) {
   .contact_form-container {
       padding:3rem
@@ -373,13 +382,12 @@ header {
 
 .contact_form-field {
   margin-right: 70px;
-  margin-bottom: 4rem;
-  
-  
+  margin-bottom: 5rem;
+   
 }
 @media only screen and (max-width: 37.5em) {
   .contact_form-field {
-      margin-bottom:3rem
+      margin-bottom:10rem
   }
 }
 .contact_form-label {
@@ -454,7 +462,7 @@ header {
 }
 
 .btn-contact-btn {
-  width: 30%;
+  width: 50%;
   padding: 2rem 4rem;
   font-size: 1.6rem
 }
@@ -462,18 +470,21 @@ header {
 .main-footer {
   background: #f9b17a;
   color: #fff;
+  margin-bottom: 0%;
+  height: 350px;
 }
 .main-container{
     max-width: 120rem;
     margin: auto;
-    width: 92%;
-
+    width: 70%;
   }
   
 .main-footer_upper{
     display: flex;
     justify-content: space-between;
     padding: 8rem 0;
+    height: 100px;
+    padding-top: 50px;
 }
 
 @media only screen and (max-width: 56.25em){
@@ -505,15 +516,16 @@ header {
 
 @media only screen and (max-width: 56.25em) {
   .main-footer_row-2{
-    width: 100%;
+    width: 90%;
   }
 }
 
 .heading-text-description_row2 {
   margin-top: 2rem;
   color: #ffffff;
-  font-size: 1.5rem;
-  line-height: 1.7;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 500px;
 }
 
 .main-footer_social-cont {
@@ -526,12 +538,14 @@ header {
 }
 
 .main-footer_lower{
-  padding: 4rem 0;
+  padding: -1rem 0;
   border-top: 1px solid #444;
   color: #ffffff;
   font-size: 1.2rem;
   text-align: left;
   text-align: center;
+  height: -100px;
+  width: -400px;
 }
 @media only screen and (max-width: 56.25em) {
   .main-footer__lower {
