@@ -7,19 +7,31 @@
     <link rel="stylesheet" href="/profiles/dennis/styleProfile.css" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+          }
+        }
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
     <section id="header">
         <header>
-            <nav>
+            <nav class="menu">
                 <ul class="nav-links">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="burger">
+                <button class="btn burger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -28,38 +40,37 @@
         </header>
     </section>
 
-    <div id="slot_edit_form"></div>
-
     <section id="home">
-        <h1><span id="slot_home_name">Hi, I'm Dennis</span></h1>
-        <p id="slot_home_profile">A web developer passionate about creating unique digital experiences. In this
-            portfolio, you'll find my latest projects and see my growth as a programmer. Explore my work and discover
-            what I can do!</p>
-
-        <div class="btn-home"><a href="#projects" class="btn">View My Projects</a></div>
+        <canvas class="webgl"></canvas>
+        <div class="home-content">
+            <h1 id="slot_home_name"> Hi, I'm Dennis</h1>
+            <p id="slot_home_profile">Full Stack developer passionate about unique digital experiences. Explore my work
+                and
+                discover what I can do!</p>
+            <div class="btn-home"><a href="#projects" class="btn home-projects">View my Projects</a></div>
+        </div>
     </section>
 
     <!-- Section About -->
     <section id="about">
-        <h2 class="title_h2">ABOUT ME</h2>
+        <h2 class="title-h2">ABOUT ME</h2>
         <div class="about-container">
-            <p id="slot_about_profile">Here you can learn more about me, what I do, and my current skills, particularly
-                in programming and technology.</p>
+            <p id="slot_about_profile"></p>
 
-            <div class="about_grid">
+            <div class="about-grid">
                 <div id="description">
-                    <h3 class="title_h3">Get to know me!</h3>
+                    <h3 class="title-h3">Get to know me!</h3>
                     <p id="slot_about_profile_grid">
-                        I'm a Frontend Web Developer passionate about creating seamless,
-                        user-friendly websites and web applications. I focus on building and managing the front-end to
-                        ensure a smooth and engaging experience that drives the success of the product. Feel free to
-                        explore
-                        some of my work in the Projects section.
+                        Frontend Web Developer focused on creating seamless, user-friendly websites and applications. I
+                        specialize in crafting engaging front-end experiences that contribute to product success. Check
+                        out my projects and skills to learn more!
                     </p>
-                    <a href="#contact" class="btn">Contact me!</a>
+                    <div class="about-description-btn">
+                        <a href="#contact" class="btn">Contact me!</a>
+                    </div>
                 </div>
                 <div id="skills">
-                    <h3 class="title_h3">My Skills</h3>
+                    <h3 class="title-h3">My Skills</h3>
                     <span id="skills_content"></span>
 
                 </div>
@@ -74,44 +85,46 @@
         <div class="projects-container">
             <!-- Proyecto 1: -->
             <div class="project-card">
-                <h3 id="slot_project_name_1">The Tinka Lottery Simulation</h3>
+                <h3 id="slot_project_name_1">Lottery Simulation</h3>
                 <img id="slot_project_img_1" src="/images/tinka.png" alt="" class="project-image" />
                 <p id="slot_project_description_1">This project simulates the Tinka lottery in C++, letting users
                     select numbers and check for matches. It also uses statistical analysis to prioritize numbers based
                     on historical frequency.
                 </p>
-                <a id="slot_project_link_1" href="" class="btn" target="_blank">View Project</a>
+                <a id="slot_project_link_1" href="https://github.com/DennisMiranda/Lottery-Simulation-cpp" class="btn"
+                    target="_blank">View Project</a>
             </div>
             <!-- Proyecto: Calendario de adviento -->
             <div class="project-card">
                 <h3>Advent Calendar</h3>
                 <img src="/images/adventcalendar.jpg" alt="Advent Calendar" class="project-image" />
                 <p>
-                    This C++ Advent Calendar simulation offers a unique daily experience, featuring a budget calculator
-                    for holiday treats on day 15 and a festive message with falling asterisk snowflakes on day 24.
-                </p>
-                <a href="URL_DEL_PROYECTO" class="btn" target="_blank">View Project</a>
+                    This C++ Advent Calendar offers a unique daily experience, including a budget calculator for holiday
+                    treats on day 15 and festive asterisk snowflakes on day 24. </p>
+                <a href="https://github.com/DennisMiranda/Advent-Calendar-Cpp" class="btn" target="_blank">View
+                    Project</a>
             </div>
             <!-- Proyecto: Juego de la Vida de Conway -->
             <div class="project-card">
-                <h3>Juego de la Vida de Conway</h3>
+                <h3>Game of life</h3>
                 <img src="/images/juegovida.png" alt="Juego de la Vida de Conway" class="project-image" />
                 <p>
                     This C++ project is a simulation of Conway's Game of Life. It models
                     cellular automata where cells live, die, or reproduce based on a set
                     of rules.
                 </p>
-                <a href="URL_DEL_PROYECTO_VIDA" class="btn" target="_blank">View Project</a>
+                <a href="https://github.com/DennisMiranda/game-of-life" class="btn" target="_blank">View Project</a>
             </div>
             <!-- Proyecto: Personal Portfolio -->
             <div class="project-card">
-                <h3>Personal Professional Portfolio </h3>
+                <h3>Personal Portfolio </h3>
                 <img src="/images/juegovida.png" alt="Personal Portfolio" class="project-image" />
                 <p>
                     This personal portfolio, built with HTML, CSS, and JavaScript, showcases my skills, projects, and
                     contact information through an interactive design.
                 </p>
-                <a href="URL_DELPROYECTO" class="btn" target="_blank">View Project</a>
+                <a href="https://github.com/DennisMiranda/Portfolio-Project" class="btn" target="_blank">View
+                    Project</a>
             </div>
             <!-- Boton para agregar mas proyectos -->
         </div>
@@ -122,32 +135,37 @@
             <h2 class="heading-contact-main">
                 <span class="heading-title-contac">Get in touch!</span>
             </h2>
-            <p>
-                <span id="slot_contact_description" class="heading-description-contac">
-                </span>
-            </p>
-            <div class="contact_form-container">
-                <form action="#" class='contact_form' method='post'><input type='hidden' name='form-name'
-                        value='form 1' />
-                    <div class="contact_form-field">
-                        <label class="contact_form-label" for="name">Name</label>
-                        <input required placeholder="Enter Your Name" type="text" class="contact_form-input" name="name"
-                            id="name" />
-                    </div>
-                    <div class="contact_form-field">
-                        <label class="contact_form-label" for="email">Email</label>
-                        <input required placeholder="Enter Your Email" type="email" class="contact_form-input"
-                            name="email" id="email" />
-                    </div>
-                    <div class="contact_form-field">
-                        <label class="contact_form-label" for="message">Message</label>
-                        <textarea required cols="30" rows="10" class="contact_form-input"
-                            placeholder="Enter Your Message" name="message" id="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn-contact-form">
-                        Submit
-                    </button>
-                </form>
+            <div class="contact-container">
+                <div class="contact-video">
+                    <video autoplay muted loop>
+                        <source src="/profiles/dennis/videos/earth.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="contact-form-container">
+                    <form action="#" class="contact-form" method="post"><input type="hidden" name="form-name"
+                            value='form 1' />
+                        <div class="contact-form-field">
+                            <label class="contact-form-label" for="name">Name</label>
+                            <input required placeholder="Enter Your Name" type="text" class="contact-form-input"
+                                name="name" id="name" />
+                        </div>
+                        <div class="contact_form-field">
+                            <label class="contact-form-label" for="email">Email</label>
+                            <input required placeholder="Enter Your Email" type="email" class="contact-form-input"
+                                name="email" id="email" />
+                        </div>
+                        <div class="contact-form-field">
+                            <label class="contact-form-label" for="message">Message</label>
+                            <textarea required cols="30" rows="10" class="contact-form-input"
+                                placeholder="Enter Your Message" name="message" id="message"></textarea>
+                        </div>
+                        <div class="contact-form-btn">
+                            <button type="submit" class="btn">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -155,17 +173,20 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-social-cont">
-                <a id="slot_linkedin_link" target="_blank" rel="noreferrer"
+                <a class="footer-icon-url" id="slot_linkedin_link" target="_blank" rel="noreferrer"
                     href="https://www.linkedin.com/in/dennis-miranda-mamani-ba916b234/">
                     <img class="footer-icon" src="/images/linkedin-ico.png" alt="Linkedin Profile" />
                 </a>
-                <a id="slot_github_link" target="_blank" rel="noreferrer" href="https://github.com/DennisMiranda">
-                    <img class="footer-icon" src="/images/github-ico.png" alt="Github Profile" />
+                <a class="footer-icon-url id=" slot_github_link" target="_blank" rel="noreferrer"
+                    href="https://github.com/DennisMiranda">
+                    <img class="footer-icon" src="/images/github-ico.webp" alt="Github Profile" />
                 </a>
-                <a id="slot_twitter_link" target="_blank" rel="noreferrer" href="https://twitter.com">
+                <a class="footer-icon-url id=" slot_twitter_link" target="_blank" rel="noreferrer"
+                    href="https://twitter.com">
                     <img class="footer-icon" src="/images/twitter-ico.png" alt="Twitter Profile" />
                 </a>
-                <a id="slot_youtube_link" target="_blank" rel="noreferrer" href="https://www.youtube.com">
+                <a class="footer-icon-url id=" slot_youtube_link" target="_blank" rel="noreferrer"
+                    href="https://www.youtube.com">
                     <img class="footer-icon" src="/images/yt-ico.png" alt="YouTube Profile" />
                 </a>
             </div>
@@ -174,6 +195,7 @@
     </footer>
     <script src="/js/skills.js"></script>
     <script src="index.js"></script>
+    <script type="module" src="animation.js"></script>
 </body>
 
 </html>
