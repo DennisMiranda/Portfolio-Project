@@ -424,109 +424,36 @@ textarea::placeholder {
   justify-content: center;
 }
 
-@media only screen and (max-width: 37.5em) {
-  .contact_form-container {
-    padding: 3rem;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .contact_form-field {
-    margin-bottom: 10rem;
-  }
-}
-
-.btn-contact-btn {
-  width: 50%;
-  padding: 2rem 4rem;
-  font-size: 1.6rem;
-}
-
 /*Footer section*/
 .main-footer {
-  background: #f9b17a;
-  color: #fff;
-  margin-bottom: 0%;
-  height: 350px;
+  background: var(--navy-blue);
+  color: var(--background-color);
 }
 .main-container {
-  max-width: 120rem;
-  margin: auto;
-  width: 70%;
-}
-
-.main-footer_upper {
   display: flex;
-  justify-content: space-between;
-  padding: 8rem 0;
-  height: 100px;
-  padding-top: 50px;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .main-footer_upper {
-    padding: 6rem 0;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .main-footer_upper {
-    display: block;
-  }
-}
-
-.main-footer_row-1 {
-  order: 4;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .main-footer_row-1 {
-    margin-bottom: 5rem;
-  }
-}
-.main-footer_row-2 {
-  width: 40%;
-  order: 1;
-  max-width: 50rem;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .main-footer_row-2 {
-    width: 90%;
-  }
-}
-
-.heading-text-description_row2 {
-  margin-top: 2rem;
-  color: #ffffff;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
 }
 
 .main-footer_social-cont {
-  margin-right: 2rem;
+  display: flex;
+  gap: 15px;
 }
 
 .main-footer_icon {
-  margin-right: 1rem;
+  margin: 0;
   width: 2.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+.main-footer_icon:hover {
+  transform: scale(1.1);
 }
 
-.main-footer_lower {
-  padding: -1rem 0;
-  border-top: 1px solid #444;
-  color: #ffffff;
-  font-size: 1.2rem;
-  text-align: left;
-  text-align: center;
-  height: -100px;
-  width: -400px;
-}
-@media only screen and (max-width: 56.25em) {
-  .main-footer__lower {
-    padding: 3.5rem 0;
-  }
+.footer-p {
+  margin: 0;
+  font-size: 14px;
+  padding: 10px 0;
 }
 
 /* Media Queries */
