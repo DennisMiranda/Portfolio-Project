@@ -16,13 +16,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 /*Padding general configuration*/
 section {
   padding: 50px 30px 30px 30px; /* Puedes ajustar este valor según tus necesidades */
 }
 
 /* Header and footer with padding 0 */
-#header,
 footer {
   padding: 0 !important;
 }
@@ -31,15 +35,14 @@ footer {
 header {
   background-color: var(--navy-blue);
   display: flex;
-  justify-content: flex-end;
-  position: fixed;
+  justify-content: space-between;
+  position: sticky;
+  padding: 0px 16px;
   z-index: 1000;
   top: 0;
   height: 60px;
-  width: 100%;
 
   nav {
-    padding-right: 30px;
     ul {
       display: flex;
       padding: 0;
@@ -475,7 +478,7 @@ textarea::placeholder {
   }
 
   header {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   nav {
     padding-left: 15px !important;
@@ -488,11 +491,14 @@ textarea::placeholder {
 
   .nav-links.active {
     display: flex;
-    background: var(--dark-gray);
+    background-color: var(--navy-blue);
     position: absolute;
     top: 60%;
-    left: 20px;
+    right: 20px;
     padding: 1rem;
+    text-align: right;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px #393939;
   }
 
   .burger {
@@ -514,7 +520,7 @@ textarea::placeholder {
     padding: 0px 20px 0px 20px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 880px) {
   #about {
     height: auto !important;
   }
