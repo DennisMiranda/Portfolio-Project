@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
+
+}  
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    background-image: url('/image/sean-pollock-PhYq704ffdA-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+<<<<<<< HEAD
+#main-container {
+  display: grid;
+  grid-template-columns: 1fr;  /* Una columna para organizar las secciones */
+  grid-gap: 20px; /* Espacio entre las secciones */
+  height: 400vh;
+}
+
+
+  /* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--color-titulo);
+}
+
+  /* Subtítulos */
+h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: var(--color-texto-secundario);
+}
+
+  /* Párrafos */
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    
+}
+
+
+/* Contenedor fluido */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Efecto hover: fondo neón y cambio de texto */
+.button:hover {
+  background: var(--clr-neon); /* Fondo de color neón */
+  color: var(--clr-bg); /* Color del texto cambia a oscuro */
+  box-shadow: 0 0 20px var(--clr-neon), 0 0 50px var(--clr-neon); /* Brillo más intenso */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efectos decorativos (luces tipo focos) */
+.button::before, .button::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 300%;
+  background: radial-gradient(circle, var(--clr-neon) 0%, transparent 80%);
+  top: -100%;
+  animation: focus-lights 2s infinite linear;
+  opacity: 0.3; /* Hace que la luz sea más sutil */
+  pointer-events: none; /* Evita que interfiera con el hover */
+}
+
+.button::before {
+  left: -100%; /* Foco izquierdo */
+}
+
+.button::after {
+  right: -100%; /* Foco derecho */
+}
+
+/* Animación de los focos */
+@keyframes focus-lights {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+=======
+h1{
+    text-transform: uppercase;
+}
+>>>>>>> 2680b9124e989117ccec5d727c97ea89ce123565

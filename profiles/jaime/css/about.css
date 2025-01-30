@@ -1,0 +1,60 @@
+#about {
+    background-color: rgba(255, 255, 255, 1);
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.section-title {
+    width: 100vw;
+    height: 80%; /* Puedes ajustar esta altura según necesites */
+    color: #ffffff;
+    padding: 2% 0 0 2%;    
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0); /* Opcional: Fondo del título */
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(80vh - 140px); 
+
+}
+
+.about-container .text-section {
+    flex: 2; /* Mayor espacio para la sección de texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%; /* Reduce el ancho máximo de la sección de texto */
+    padding: 10px;
+    position: relative;
+    left: 300px;
+}
+
+.image-stack {
+    flex: 1; /* Mayor espacio para la sección de texto */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    margin: 0 50px 0;    
+    position: relative;
+    right: 500px;
+
+}
+
+.about-text {
+    text-align: left;
+    margin: 20px;
+    padding-left: 15%;
+}
+
+.image-stack .form-image {
+    width: 100%;
+    margin:  0;
+}

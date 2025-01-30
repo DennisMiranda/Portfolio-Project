@@ -1,0 +1,69 @@
+header {
+  position: fixed; /* Fija el header al tope de la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Aumentado para mayor espacio en pantallas grandes */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(25, 86, 177); /* Fondo azul */
+  color: #fff;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el ícono y el texto */
+  background-color: #064097;
+  height: 50px;
+  padding: 0 20px; /* Ajuste para menos espacio */
+}
+
+.logo img {
+  width: 70px; /* Tamaño del ícono */
+  height: auto; /* Mantén la proporción del ícono */
+}
+
+/* Navbar (visible por defecto en pantallas grandes) */
+.navbar {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #1e90ff; /* Azul brillante al pasar el mouse */
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none; /* Por defecto, oculto en pantallas grandes */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
