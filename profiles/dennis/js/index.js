@@ -1,4 +1,4 @@
-//Código para el boton tipo hamburguesa en disposivos móviles
+//Burger menu
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector(".burger");
   const menuOptions = document.querySelector(".nav-links");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuOptions.classList.toggle("active");
   });
 
-  //  Cerrar el menú cuando se hace clic fuera del área del menú
+  //  Close burger menu
   document.addEventListener("click", (event) => {
     console.log(event);
     if (!event.target.closest(".burger")) {
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//animation h2
-// Crear un Intersection Observer
+//Animation h2
+// Create an Intersection Observer
 const observer = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Cuando el elemento entra en el viewport
+        // When element is on viewport
         entry.target.classList.add("visible");
       } else {
         entry.target.classList.remove("visible");
@@ -30,11 +30,11 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5, // La animación se activa cuando el 50% del elemento está visible
+    threshold: 0.5,
   }
 );
 
-// Observar todos los subtítulos (h2)
+// Observe all subtitles (h1 and h2)
 document.querySelectorAll("h1, h2").forEach((subtitle) => {
   observer.observe(subtitle);
 });
