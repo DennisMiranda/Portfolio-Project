@@ -5,7 +5,7 @@
   --primary-bg-color: #fcfcfc; /* Fondo general */
   --dark-gray: #696d9a; /* Azul marino */
   --navy-blue: #2d314e; /* Azul oscuro */
-  --highlight-color: #edb381; /* Naranja suave d6bb80 cd996e*/
+  --highlight-color: #dd9a5f; /* Naranja suave d6bb80 cd996e*/
   --background-color: #f2f2f2; /* Gris azulado */
   --highlight-header-color: #e2bf2b; /* amarillo claro */
 }
@@ -23,7 +23,7 @@ body {
 
 /*Padding general configuration*/
 section {
-  padding: 50px 30px 30px 30px; /* Puedes ajustar este valor según tus necesidades */
+  padding: 50px 30px 30px 30px;
 }
 
 /* Header and footer with padding 0 */
@@ -155,6 +155,7 @@ h3 {
 }
 p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--navy-blue);
 }
 
 /* About Section */
@@ -296,8 +297,9 @@ p {
 }
 
 .team-member img {
+  object-fit: contain;
   width: 100%;
-  height: 200px;
+  height: 240px;
   border-radius: 10px;
 }
 
