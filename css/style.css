@@ -265,79 +265,58 @@ p {
 /*Section Team*/
 
 .team-section {
-  text-align: center;
-  background-color: #fff5e6; /* Fondo naranja suave */
-  padding: 40px 20px; /* Añade un margen interno */
-  min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-color);
+  padding: 40px 20px;
 }
 
 .team-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
-  gap: 20px; /* Espaciado entre tarjetas */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  padding: 0; /* Elimina cualquier padding que pueda estar afectando */
-  margin: 0 auto; /* Centra el contenedor */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
 }
 
 .team-member {
-  perspective: 1200px; /* Ajusta la perspectiva del efecto 3D */
-  margin: 20px; /* Añade un margen alrededor de cada tarjeta */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
-.card {
-  width: 250px; /* Ancho fijo para todas las tarjetas */
-  height: 350px; /* Altura fija para todas las tarjetas */
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease-in-out; /* Transición suave */
+.team-member:hover {
+  transform: translateY(-5px);
 }
 
-.card.flipped {
-  transform: rotateY(180deg); /* Voltea la tarjeta al pasar el mouse */
-}
-
-.front,
-.back {
+.team-member img {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-  overflow: hidden; /* Esconde el contenido desbordado */
+  height: 200px;
+  border-radius: 10px;
 }
 
-.front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantiene la proporción de la imagen */
-}
-
-.back {
-  background-color: #333;
-  color: #fff;
+/* Información del miembro */
+.info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  transform: rotateY(180deg);
-  padding: 20px; /* Espaciado interno */
-  text-align: center;
-}
-
-.back h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.back p {
-  font-size: 1rem;
-  line-height: 1.5;
+  padding: 15px;
+  p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--navy-blue);
+    margin: 10px;
+  }
+  .btn {
+    margin: 20px 0px 10px 0px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
 }
 
 /* Contact Form */
