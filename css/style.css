@@ -166,21 +166,14 @@ p {
   color: var(--navy-blue);
   text-align: center;
   align-items: center;
-  max-height: 900px;
   height: calc(100vh - 58px);
   p {
     margin-bottom: 30px;
   }
 
-  /* Separate columns */
-
-  @media (max-width: 768px) {
-    .about_grid {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
   .about-container {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
   }
 
@@ -192,10 +185,10 @@ p {
   .about-grid {
     display: flex;
     gap: 20px;
-    padding: 0px 30px;
     flex-wrap: wrap;
 
-    #description {
+    #description,
+    #skills {
       display: flex;
       flex-direction: column;
       background-color: var(--background-color);
@@ -203,20 +196,12 @@ p {
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       flex: 1;
-      min-width: 300px;
+      flex-basis: 300px;
     }
 
-    #skills {
-      background-color: var(--background-color);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex: 1;
-      min-width: 300px;
-      #skills_content {
-        display: flex;
-        justify-content: center;
-      }
+    #skills_content {
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -477,13 +462,6 @@ textarea::placeholder {
     padding: 15px;
   }
 
-  header {
-    justify-content: space-between;
-  }
-  nav {
-    padding-left: 15px !important;
-  }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -508,18 +486,13 @@ textarea::placeholder {
     margin: 0 !important;
   }
 
-  /*About*/
-  /* En pantallas pequeñas, la grilla será de una sola columna */
-  .about-grid {
-    grid-template-columns: 1fr; /* Solo una columna */
-  }
-
   /* Ajustar el texto en los párrafos para pantallas pequeñas */
   #slot_about_profile,
   #slot_about_profile_grid {
     padding: 0px 20px 0px 20px;
   }
 }
+
 @media (max-width: 880px) {
   #about {
     height: auto !important;
