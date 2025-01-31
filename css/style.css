@@ -8,6 +8,7 @@
   --highlight-color: #dd9a5f; /* Naranja suave d6bb80 cd996e*/
   --background-color: #f2f2f2; /* Gris azulado */
   --highlight-header-color: #e2bf2b; /* amarillo claro */
+  --h1-text: #f1c40f;
 }
 
 html,
@@ -97,7 +98,9 @@ header {
 
 /* home */
 #home {
-  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  position: relative;
+  background-color: #070816c2;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,13 +109,13 @@ header {
 }
 
 #home h1 {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-family: "Poppins", sans-serif; /* Usa la fuente que prefieras */
-  color: #f1c40f; /* Color dorado */
+  color: var(--h1-text); /* Color dorado */
   font-weight: bold;
   overflow: hidden; /* Asegura que las letras aparezcan una por una */
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  border-right: 3px solid #f1c40f; /* Cursor del efecto de tecleado */
+  border-right: 3px solid var(--h1-text); /* Cursor del efecto de tecleado */
   width: 0; /* Inicia con el texto oculto */
   animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animación */
 }
@@ -139,8 +142,8 @@ header {
 }
 
 #home h2 {
-  font-size: 2.5rem;
-  color: #5de733; /* Color gris oscuro */
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  color: var(--primary-bg-color); /* Color gris oscuro */
   font-style: italic;
   opacity: 0; /* Inicialmente oculto */
   animation: fadeIn 5s forwards; /* Aparece en 2 segundos */
@@ -154,7 +157,7 @@ header {
   }
 }
 
-#home .btn {
+#home .btn-home {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
   color: white;
@@ -164,6 +167,7 @@ header {
   cursor: pointer;
   position: relative;
   border-radius: 8px;
+  text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s;
   box-shadow: 0 0 10px orange;
@@ -205,6 +209,23 @@ header {
   }
 }
 
+/*Buttons configuration*/
+.btn {
+  padding: 10px 20px;
+  background-color: var(--highlight-color);
+  color: var(--navy-blue);
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--highlight-header-color);
+  color: var(--navy-blue);
+}
+
 /*Subtitles configuration*/
 h2 {
   font-size: clamp(1.5rem, 4.5vw, 2.5rem);
@@ -225,7 +246,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: var(--primary-bg-color);
+  background-color: var(--background-color);
   color: var(--navy-blue);
   text-align: center;
   align-items: center;
@@ -254,7 +275,7 @@ p {
     #skills {
       display: flex;
       flex-direction: column;
-      background-color: var(--background-color);
+      background-color: var(--primary-bg-color);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
