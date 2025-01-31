@@ -1,28 +1,28 @@
 import * as THREE from "three";
-//import "./styleAni.css";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-//1. crear escena
+//1. Create scene
 const scene = new THREE.Scene();
-// Crear un cargador de texturas
 
-//2. Crear la geometría de la esfera
+//2. Create sphere (mesh)
 const createSphere = (radius, texturePath, position) => {
   const textureLoader = new THREE.TextureLoader();
   const texture = textureLoader.load(texturePath);
 
+  //Sphere Properties
   const geometry = new THREE.SphereGeometry(radius, 64, 64); //radio y segmentos alto y bajo
   const material = new THREE.MeshStandardMaterial({ map: texture });
   const mesh = new THREE.Mesh(geometry, material); //combinacion de la figura (esfera) y el material-
   material.color = { r: 255, g: 255, b: 255 };
   material.roughness = 0.7;
   material.metalness = 0.5;
-  // Asignar el material al mesh
+  //Asigne material to mesh
   mesh.material = material;
-
+  //Set mesh position
   mesh.position.set(position.x, position.y, position.z);
   return mesh;
 };
 
+//Set place and size respect to the home section
 const homeSection = document.getElementById("home");
 //Sizes
 const sizes = {
@@ -30,13 +30,13 @@ const sizes = {
   height: homeSection.clientHeight,
 };
 
-//2.1 crear luz en la esfera para que se vea:
+//2.1 Create the light on sphere to be visible
 const light = new THREE.PointLight(0xffffff, 1, 100);
-light.position.set(0, 20, -10); // Posición de la luz
+light.position.set(0, 20, -10);
 light.intensity = 50;
 scene.add(light);
-
-const ambientLight = new THREE.AmbientLight(0x404040, 0.009); // soft white light
+//Set ambientLigth, color and intensity
+const ambientLight = new THREE.AmbientLight(0x404040, 0.009);
 scene.add(ambientLight);
 
 //3.camera - campo de vision

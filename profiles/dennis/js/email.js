@@ -4,7 +4,11 @@ emailjs.init(CONFIG.EMAIL_API_KEY);
 //Form to contact and submit message
 const btn = document.getElementById("submit_contact_form");
 
-document.getElementById("form").addEventListener("submit", function (event) {
+//Detect submit event and execute function senEmail
+document.getElementById("form").addEventListener("submit", sendEmail);
+
+//Function to sendEmail automatically
+function sendEmail(event) {
   event.preventDefault();
 
   btn.textContent = "Sending...";
@@ -40,4 +44,4 @@ document.getElementById("form").addEventListener("submit", function (event) {
         btn.disabled = false;
       }
     );
-});
+}

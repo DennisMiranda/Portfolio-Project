@@ -9,13 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //  Close burger menu
   document.addEventListener("click", (event) => {
+    //event.target=click, if click is not inside burger, then it closes
     if (!event.target.closest(".burger")) {
       menuOptions.classList.remove("active");
     }
   });
 });
 
-//Animation h2
+//Animation h1 h2
 // Create an Intersection Observer
 const observer = new IntersectionObserver(
   (entries, observer) => {
