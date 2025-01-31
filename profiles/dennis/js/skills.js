@@ -26,7 +26,7 @@ const tagCloud = TagCloud(idContainer, myTags, {
 });
 
 //To change the color of text randomly
-var colors = ["#3B2A45", "#1D1F30", "#4E5B6E", "#7F6B9B", "2C3E50", "7C9E92"];
+var colors = [" #40E0D0", " #FF007F", " #8A2BE2", " #EAEAEA", " #00bFFF"];
 var random_color = colors[Math.floor(Math.random() * colors.length)];
 document.querySelector(idContainer).style.color = random_color;
 

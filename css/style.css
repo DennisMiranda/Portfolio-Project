@@ -5,7 +5,7 @@
   --primary-bg-color: #fcfcfc; /* Fondo general */
   --dark-gray: #696d9a; /* Azul marino */
   --navy-blue: #2d314e; /* Azul oscuro */
-  --highlight-color: #edb381; /* Naranja suave d6bb80 cd996e*/
+  --highlight-color: #dd9a5f; /* Naranja suave d6bb80 cd996e*/
   --background-color: #f2f2f2; /* Gris azulado */
   --highlight-header-color: #e2bf2b; /* amarillo claro */
 }
@@ -16,13 +16,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 /*Padding general configuration*/
 section {
-  padding: 50px 30px 30px 30px; /* Puedes ajustar este valor según tus necesidades */
+  padding: 50px 30px 30px 30px;
 }
 
 /* Header and footer with padding 0 */
-#header,
 footer {
   padding: 0 !important;
 }
@@ -31,15 +35,14 @@ footer {
 header {
   background-color: var(--navy-blue);
   display: flex;
-  justify-content: flex-end;
-  position: fixed;
+  justify-content: space-between;
+  position: sticky;
+  padding: 0px 16px;
   z-index: 1000;
   top: 0;
   height: 60px;
-  width: 100%;
 
   nav {
-    padding-right: 30px;
     ul {
       display: flex;
       padding: 0;
@@ -222,6 +225,7 @@ h3 {
 }
 p {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--navy-blue);
 }
 
 /* About Section */
@@ -233,21 +237,14 @@ p {
   color: var(--navy-blue);
   text-align: center;
   align-items: center;
-  max-height: 900px;
   height: calc(100vh - 58px);
   p {
     margin-bottom: 30px;
   }
 
-  /* Separate columns */
-
-  @media (max-width: 768px) {
-    .about_grid {
-      grid-template-columns: 1fr !important;
-    }
-  }
-
   .about-container {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
   }
 
@@ -259,10 +256,10 @@ p {
   .about-grid {
     display: flex;
     gap: 20px;
-    padding: 0px 30px;
     flex-wrap: wrap;
 
-    #description {
+    #description,
+    #skills {
       display: flex;
       flex-direction: column;
       background-color: var(--background-color);
@@ -270,20 +267,12 @@ p {
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       flex: 1;
-      min-width: 300px;
+      flex-basis: 300px;
     }
 
-    #skills {
-      background-color: var(--background-color);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex: 1;
-      min-width: 300px;
-      #skills_content {
-        display: flex;
-        justify-content: center;
-      }
+    #skills_content {
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -347,79 +336,59 @@ p {
 /*Section Team*/
 
 .team-section {
-  text-align: center;
-  background-color: #fff5e6; /* Fondo naranja suave */
-  padding: 40px 20px; /* Añade un margen interno */
-  min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-color);
+  padding: 40px 20px;
 }
 
 .team-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
-  gap: 20px; /* Espaciado entre tarjetas */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  padding: 0; /* Elimina cualquier padding que pueda estar afectando */
-  margin: 0 auto; /* Centra el contenedor */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
 }
 
 .team-member {
-  perspective: 1200px; /* Ajusta la perspectiva del efecto 3D */
-  margin: 20px; /* Añade un margen alrededor de cada tarjeta */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 280px;
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
-.card {
-  width: 250px; /* Ancho fijo para todas las tarjetas */
-  height: 350px; /* Altura fija para todas las tarjetas */
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease-in-out; /* Transición suave */
+.team-member:hover {
+  transform: translateY(-5px);
 }
 
-.card.flipped {
-  transform: rotateY(180deg); /* Voltea la tarjeta al pasar el mouse */
-}
-
-.front,
-.back {
+.team-member img {
+  object-fit: contain;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-  overflow: hidden; /* Esconde el contenido desbordado */
+  height: 240px;
+  border-radius: 10px;
 }
 
-.front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantiene la proporción de la imagen */
-}
-
-.back {
-  background-color: #333;
-  color: #fff;
+/* Información del miembro */
+.info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  transform: rotateY(180deg);
-  padding: 20px; /* Espaciado interno */
-  text-align: center;
-}
-
-.back h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.back p {
-  font-size: 1rem;
-  line-height: 1.5;
+  padding: 15px;
+  p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--navy-blue);
+    margin: 10px;
+  }
+  .btn {
+    margin: 20px 0px 10px 0px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
 }
 
 /* Contact Form */
@@ -544,13 +513,6 @@ textarea::placeholder {
     padding: 15px;
   }
 
-  header {
-    justify-content: flex-start;
-  }
-  nav {
-    padding-left: 15px !important;
-  }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -558,11 +520,14 @@ textarea::placeholder {
 
   .nav-links.active {
     display: flex;
-    background: var(--dark-gray);
+    background-color: var(--navy-blue);
     position: absolute;
     top: 60%;
-    left: 20px;
+    right: 20px;
     padding: 1rem;
+    text-align: right;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px #393939;
   }
 
   .burger {
@@ -572,19 +537,14 @@ textarea::placeholder {
     margin: 0 !important;
   }
 
-  /*About*/
-  /* En pantallas pequeñas, la grilla será de una sola columna */
-  .about-grid {
-    grid-template-columns: 1fr; /* Solo una columna */
-  }
-
   /* Ajustar el texto en los párrafos para pantallas pequeñas */
   #slot_about_profile,
   #slot_about_profile_grid {
     padding: 0px 20px 0px 20px;
   }
 }
-@media (max-width: 850px) {
+
+@media (max-width: 880px) {
   #about {
     height: auto !important;
   }
