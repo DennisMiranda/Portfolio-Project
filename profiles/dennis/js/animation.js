@@ -78,35 +78,27 @@ window.addEventListener("resize", () => {
 });
 
 //crear esferas con textura
-const sphere1 = createSphere(7, "/profiles/dennis/images/Planets/earthN.webp", {
+const sphere1 = createSphere(7, "images/Planets/earthN.webp", {
   x: 0,
   y: -3,
   z: 1,
 });
-const sphere2 = createSphere(2, "/profiles/dennis/images/Planets/venus.webp", {
+const sphere2 = createSphere(2, "images/Planets/venus.webp", {
   x: -40,
   y: -6,
   z: -3,
 });
-const sphere3 = createSphere(
-  5,
-  "/profiles/dennis/images/Planets/jupiter.webp",
-  {
-    x: 50,
-    y: -3,
-    z: -3,
-  }
-);
-const sphere4 = createSphere(
-  2,
-  "/profiles/dennis/images/Planets/mercury.webp",
-  {
-    x: 75,
-    y: 5,
-    z: -3,
-  }
-);
-const sphere5 = createSphere(3, "/profiles/dennis/images/Planets/mars.webp", {
+const sphere3 = createSphere(5, "images/Planets/jupiter.webp", {
+  x: 50,
+  y: -3,
+  z: -3,
+});
+const sphere4 = createSphere(2, "images/Planets/mercury.webp", {
+  x: 75,
+  y: 5,
+  z: -3,
+});
+const sphere5 = createSphere(3, "images/Planets/mars.webp", {
   x: -50,
   y: -2,
   z: -5,
@@ -154,4 +146,4 @@ const setSceneCubeBackground = (scene, texturePath) => {
   const textureCube = new THREE.CubeTextureLoader().load(urls);
   scene.background = textureCube;
 };
-setSceneCubeBackground(scene, "/profiles/dennis/images/MilkyWay/");
+setSceneCubeBackground(scene, "images/MilkyWay/");
