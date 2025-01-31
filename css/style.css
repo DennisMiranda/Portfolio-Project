@@ -8,6 +8,7 @@
   --highlight-color: #dd9a5f; /* Naranja suave d6bb80 cd996e*/
   --background-color: #f2f2f2; /* Gris azulado */
   --highlight-header-color: #e2bf2b; /* amarillo claro */
+  --h1-text: #f1c40f;
 }
 
 html,
@@ -15,13 +16,11 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-
 }
 
 body {
   display: flex;
   flex-direction: column;
-
 }
 
 /*Padding general configuration*/
@@ -76,8 +75,7 @@ header {
   }
 
   .logo {
-    width: 100px;
-    
+    width: 40px;
   }
 }
 
@@ -100,32 +98,32 @@ header {
 
 /* home */
 #home {
-  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  position: relative;
+  background-color: #070816c2;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 #home h1 {
-  font-size: 5rem;
-  font-family: 'Poppins', sans-serif; /* Usa la fuente que prefieras */
-  color: #f1c40f; /* Color dorado */
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-family: "Poppins", sans-serif; /* Usa la fuente que prefieras */
+  color: var(--h1-text); /* Color dorado */
   font-weight: bold;
   overflow: hidden; /* Asegura que las letras aparezcan una por una */
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  border-right: 3px solid #f1c40f; /* Cursor del efecto de tecleado */
+  border-right: 3px solid var(--h1-text); /* Cursor del efecto de tecleado */
   width: 0; /* Inicia con el texto oculto */
   animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Animación */
 }
 
-
 @keyframes typing {
   100% {
-    width: 100%; 
-}
+    width: 100%;
+  }
 }
 @keyframes blink {
   50% {
@@ -133,20 +131,19 @@ header {
   }
 }
 
-
 .video-background video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  z-index: -2; 
+  object-fit: cover;
+  z-index: -2;
 }
 
 #home h2 {
-  font-size: 2.5rem;
-  color: #5de733; /* Color gris oscuro */
+  font-size: clamp(1.5rem, 4.5vw, 2.5rem);
+  color: var(--primary-bg-color); /* Color gris oscuro */
   font-style: italic;
   opacity: 0; /* Inicialmente oculto */
   animation: fadeIn 5s forwards; /* Aparece en 2 segundos */
@@ -160,11 +157,9 @@ header {
   }
 }
 
-
-
-#home .btn {
+#home .btn-home {
   font-size: 18px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
   background-color: orangered;
   border: 2px solid rgba(210, 224, 9, 0.432);
@@ -172,23 +167,23 @@ header {
   cursor: pointer;
   position: relative;
   border-radius: 8px;
+  text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s;
   box-shadow: 0 0 10px orange;
   margin-top: 80px;
-  animation: moveButton 1.5s infinite alternate, fadeIn 8s ease-out forwards; 
+  animation: moveButton 1.5s infinite alternate, fadeIn 8s ease-out forwards;
   opacity: 0; /* Totalmente invisible al inicio */
-
 }
 
 /* Efecto de luz cuando pasa el mouse */
 #home .btn:hover {
   background-color: #ffee00; /* Fondo color neón */
   color: #222222; /* Texto oscuro cuando está en hover */
-  box-shadow: 0 20px 50px rgba(233, 233, 5, 0.7), 0 40px 100px rgba(240, 240, 5, 0.4),
-  0 40px 50px rgba(233, 233, 5, 0.7), 0 60px 100px rgba(240, 240, 5, 0.4);
+  box-shadow: 0 20px 50px rgba(233, 233, 5, 0.7),
+    0 40px 100px rgba(240, 240, 5, 0.4), 0 40px 50px rgba(233, 233, 5, 0.7),
+    0 60px 100px rgba(240, 240, 5, 0.4);
   transform: translateY(-5px); /* Levantar el botón */
-  
 }
 
 /* Animación de movimiento para el botón */
@@ -204,17 +199,32 @@ header {
 /* Animación de aparición suave desde opaco 0 hasta opaco 1 */
 @keyframes fadeIn {
   0% {
-      }
+  }
   50% {
-      opacity: 0; 
-      }
-  
+    opacity: 0;
+  }
+
   100% {
-    opacity: 1; 
+    opacity: 1;
   }
 }
 
+/*Buttons configuration*/
+.btn {
+  padding: 10px 20px;
+  background-color: var(--highlight-color);
+  color: var(--navy-blue);
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  border-color: transparent;
+  cursor: pointer;
+}
 
+.btn:hover {
+  background-color: var(--highlight-header-color);
+  color: var(--navy-blue);
+}
 
 /*Subtitles configuration*/
 h2 {
@@ -236,7 +246,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: var(--primary-bg-color);
+  background-color: var(--background-color);
   color: var(--navy-blue);
   text-align: center;
   align-items: center;
@@ -265,7 +275,7 @@ p {
     #skills {
       display: flex;
       flex-direction: column;
-      background-color: var(--background-color);
+      background-color: var(--primary-bg-color);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

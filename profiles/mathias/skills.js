@@ -4,6 +4,7 @@ const myTags = [
     'Python', 'Github', 'Node.js', 'MySQL', 'jQuery',
 ];
 
+// Declarar variable
 var tagCloud = TagCloud('.content', myTags,{
 
   // radius in px
