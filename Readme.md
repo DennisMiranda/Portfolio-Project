@@ -1,15 +1,15 @@
 # Portfolio Project
 
-Bienvenido a mi proyecto de portafolio. Este sitio web muestra mis habilidades y proyectos como desarrollador web.
+Bienvenido al proyecto de portafolio. Este sitio web muestra las habilidades y proyectos como desarrolladores web del equipo Creative Coders.
 
 ## Descripción
 
 Este proyecto es una página web de portafolio que incluye:
 
 - Una sección de inicio con una introducción.
-- Una sección "Sobre mí" que detalla mi experiencia y habilidades.
-- Una sección de proyectos que destaca algunos de mis trabajos más destacados.
-- Una sección de contacto para que los visitantes puedan comunicarse conmigo.
+- Una sección "Sobre mí" que detalla la experiencia y habilidades de cada miembro del equipo.
+- Una sección de proyectos que destaca algunos de los trabajos más destacados.
+- Una sección de contacto para que los visitantes puedan comunicarse con cada integrante del equipo.
 
 ## Tecnologías Utilizadas
 
@@ -52,11 +52,5 @@ Portfolio-Project/
 ├── .gitignore
 └── index.html
 ```
-
-## Contacto
-
-Para cualquier consulta o sugerencia, puedes contactarme a través de [tu correo electrónico] o visitar mi perfil de GitHub en [https://github.com/DennisMiranda](https://github.com/DennisMiranda).
-
----
 
 ¡Gracias por visitar este portafolio!
