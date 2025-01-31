@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //  Close burger menu
   document.addEventListener("click", (event) => {
-    console.log(event);
     if (!event.target.closest(".burger")) {
       menuOptions.classList.remove("active");
     }

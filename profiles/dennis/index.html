@@ -18,7 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -144,7 +144,7 @@
                     </video>
                 </div>
                 <div class="contact-form-container">
-                    <form action="#" class="contact-form" method="post"><input type="hidden" name="form-name"
+                    <form id="form" action="#" class="contact-form" method="post"><input type="hidden" name="form-name"
                             value='form 1' />
                         <div class="contact-form-field">
                             <label class="contact-form-label" for="name">Name</label>
@@ -162,7 +162,7 @@
                                 placeholder="Enter Your Message" name="message" id="message"></textarea>
                         </div>
                         <div class="contact-form-btn">
-                            <button type="submit" class="btn">
+                            <button id="submit_contact_form" type="submit" class="btn">
                                 Submit
                             </button>
                         </div>
@@ -198,6 +198,7 @@
     <script src="js/skills.js"></script>
     <script src="js/index.js"></script>
     <script type="module" src="js/animation.js"></script>
+    <script type="module" src="js/email.js"></script>
 </body>
 
 </html>
